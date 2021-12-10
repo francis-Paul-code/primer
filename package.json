@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "node server.js ",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "heroku-postbuild": "ng build — prod",
+    "heroku-postbuild": "ng build --prod",
     "server": "json-server --watch db.json --port 5000"
   },
   "private": true,
