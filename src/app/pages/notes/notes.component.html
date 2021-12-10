@@ -1,0 +1,13 @@
+<div class="main-container">
+  <ul class="_content">
+    <li class="_note" *ngFor="let note of notes" matRipple>
+        <app-note
+      title="{{ note.title }}"
+      body="{{ note.body }}"
+      date="{{ note.date }}"
+      subTitle="{{ note.subTitle }}"
+    ></app-note>
+    </li>
+
+  </ul>
+</div>

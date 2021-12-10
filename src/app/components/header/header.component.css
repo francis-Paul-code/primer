@@ -1,0 +1,52 @@
+header {
+  position: relative;
+  width: 100vw;
+  height: 56px;
+  display: flex;
+  z-index: 20;
+  justify-content: space-between;
+  background: #0f324d;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,.3);
+}
+.logobar {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  contain: content;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.logo {
+  position: relative;
+  height: 65%;
+  padding-inline-start: 50px;
+  align-items: center;
+   display: flex;
+   box-sizing: border-box;
+  box-sizing: border-box;
+}
+.logotext {
+  position: relative;
+  box-sizing: border-box;
+  padding-inline: 10px;
+  letter-spacing: 0.0125em;
+  color: #fff;
+  display: flex;
+  flex: 1 1 0%;
+  align-items: center;
+}
+.theme {
+  position: relative;
+  position: relative;
+  height: 100%;
+  width: 15%;
+  display: flex;
+  float: right;
+  right: 3%;
+}

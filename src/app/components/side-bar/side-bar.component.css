@@ -1,0 +1,10 @@
+#sideBar {
+  position: relative;
+  height: 92vh;
+  min-width: 22vw;
+  background: white;
+  float: left;
+  box-shadow: 18px 4px 46px -27px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 18px 4px 46px -27px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 18px 4px 46px -27px rgba(0, 0, 0, 0.7);
+}
