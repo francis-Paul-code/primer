@@ -17,7 +17,7 @@
 }
 ._note{
   position: relative;
-  width:20vw;
+  width:23vw;
   height:55vh;
   overflow: hidden;
   border-radius: 5px;
@@ -28,14 +28,16 @@
 /* Tablet*/
 @media screen and (max-width: 890px) {
 ._note{
-  width:28vw;
+  width:27vw;
   height:30vh;
 }
 }
 /*Mobile*/
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
 ._note{
-  width:38vw;
+  width:58vw;
   height:40vh;
+  padding-top:10px;
+  margin:0 auto;
 }
 }

@@ -1,13 +1,18 @@
 <div class="main-container">
   <app-header></app-header>
 
-
-<!-- Desktop Version -->
+  <!-- Desktop Version -->
 
   <div class="main-content" *ngIf="desktop">
-    <mat-drawer-container class="sidenav" autosize fullscreen >
-      <mat-drawer #drawer class="sidenav-slide" mode="side" opened [class.closed]="navState === false">
-        <br *ngIf="navState === false"/>
+    <mat-drawer-container class="sidenav" autosize fullscreen>
+      <mat-drawer
+        #drawer
+        class="sidenav-slide"
+        mode="side"
+        opened
+        [class.closed]="navState === false"
+      >
+        <br *ngIf="navState === false" />
         <button
           type="button"
           mat-icon-button
@@ -17,14 +22,14 @@
           [class.closed]="navState === false"
         >
           <mat-icon *ngIf="navState">clear</mat-icon>
-          <mat-icon *ngIf="navState ===  false">subject</mat-icon>
+          <mat-icon *ngIf="navState === false">subject</mat-icon>
         </button>
         <br />
         <br />
 
         <mat-list role="list" class="list one">
-          <mat-list-item matRipple  role="list-item" class="list-item">
-            <mat-icon style="color:#070D4D">home</mat-icon>
+          <mat-list-item matRipple role="list-item" class="list-item">
+            <mat-icon style="color: #070d4d">home</mat-icon>
             <span class="label" *ngIf="navState">My Projects</span>
           </mat-list-item>
         </mat-list>
@@ -32,21 +37,21 @@
         <mat-divider></mat-divider>
         <mat-list role="list" class="list two">
           <a routerLink="notes" style="text-decoration: none">
-          <mat-list-item  matRipple  role="list-item" class="list-item">
-            <mat-icon  style="color:#F7BB32">note</mat-icon>
-            <span class="label" *ngIf="navState">Notes</span>
-          </mat-list-item></a>
+            <mat-list-item matRipple role="list-item" class="list-item">
+              <mat-icon style="color: #f7bb32">note</mat-icon>
+              <span class="label" *ngIf="navState">Notes</span>
+            </mat-list-item></a
+          >
 
-           <mat-list-item matRipple role="list-item" class="list-item">
-            <mat-icon style="color:#A94064">assignment_turned_in</mat-icon>
+          <mat-list-item matRipple role="list-item" class="list-item">
+            <mat-icon style="color: #a94064">assignment_turned_in</mat-icon>
             <span class="label" *ngIf="navState">Tasks</span>
           </mat-list-item>
 
-          <mat-list-item matRipple  role="list-item" class="list-item">
-            <mat-icon  style="color:#4CBFFB">add</mat-icon>
+          <mat-list-item matRipple role="list-item" class="list-item">
+            <mat-icon style="color: #4cbffb">add</mat-icon>
             <span class="label" *ngIf="navState">Add</span>
           </mat-list-item>
-
         </mat-list>
       </mat-drawer>
       <div class="routing">
@@ -55,13 +60,18 @@
     </mat-drawer-container>
   </div>
 
+  <!-- Mobile Version  -->
 
-<!-- Mobile Version  -->
-
-<div class="main-content" *ngIf="mobile">
-    <mat-drawer-container class="sidenav" autosize fullscreen >
-      <mat-drawer #drawer class="sidenav-slide" mode="side" opened [class.closed]="navState === false">
-        <br *ngIf="navState === false"/>
+  <div class="main-content" *ngIf="mobile">
+    <mat-drawer-container class="sidenav" autosize fullscreen>
+      <mat-drawer
+        #drawer
+        class="sidenav-slide"
+        mode="side"
+        opened
+        [class.closed]="navState === false"
+      >
+        <br *ngIf="navState === false" />
         <button
           type="button"
           mat-icon-button
@@ -71,36 +81,36 @@
           [class.closed]="navState === false"
         >
           <mat-icon *ngIf="navState">clear</mat-icon>
-          <mat-icon *ngIf="navState ===  false">subject</mat-icon>
+          <mat-icon *ngIf="navState === false">subject</mat-icon>
         </button>
         <br />
         <br />
 
         <mat-list role="list" class="list one">
-          <mat-list-item matRipple  role="list-item" class="list-item">
-            <mat-icon style="color:#070D4D">home</mat-icon>
+          <mat-list-item matRipple role="list-item" class="list-item">
+            <mat-icon style="color: #070d4d">home</mat-icon>
             <span class="label" *ngIf="navState">My Projects</span>
           </mat-list-item>
         </mat-list>
 
         <mat-divider></mat-divider>
         <mat-list role="list" class="list two">
+          <a routerLink="notes" style="text-decoration: none">
+            <mat-list-item matRipple role="list-item" class="list-item">
+              <mat-icon style="color: #f7bb32">note</mat-icon>
+              <span class="label" *ngIf="navState">Notes</span>
+            </mat-list-item>
+          </a>
 
-          <mat-list-item  matRipple  role="list-item" class="list-item">
-            <mat-icon  style="color:#F7BB32">note</mat-icon>
-            <span class="label" *ngIf="navState">Notes</span>
-          </mat-list-item>
-
-           <mat-list-item matRipple role="list-item" class="list-item">
-            <mat-icon style="color:#A94064">assignment_turned_in</mat-icon>
+          <mat-list-item matRipple role="list-item" class="list-item">
+            <mat-icon style="color: #a94064">assignment_turned_in</mat-icon>
             <span class="label" *ngIf="navState">Tasks</span>
           </mat-list-item>
 
-          <mat-list-item matRipple  role="list-item" class="list-item">
-            <mat-icon  style="color:#4CBFFB">add</mat-icon>
+          <mat-list-item matRipple role="list-item" class="list-item">
+            <mat-icon style="color: #4cbffb">add</mat-icon>
             <span class="label" *ngIf="navState">Add</span>
           </mat-list-item>
-
         </mat-list>
       </mat-drawer>
       <div class="routing">
@@ -110,15 +120,18 @@
     </mat-drawer-container>
   </div>
 
+  <!-- Tablet Version  -->
 
-
-
-<!-- Tablet Version  -->
-
-<div class="main-content" *ngIf="tablet">
-    <mat-drawer-container class="sidenav" autosize fullscreen >
-      <mat-drawer #drawer class="sidenav-slide" mode="side" opened [class.closed]="navState === false">
-        <br *ngIf="navState === false"/>
+  <div class="main-content" *ngIf="tablet">
+    <mat-drawer-container class="sidenav" autosize fullscreen>
+      <mat-drawer
+        #drawer
+        class="sidenav-slide"
+        mode="side"
+        opened
+        [class.closed]="navState === false"
+      >
+        <br *ngIf="navState === false" />
         <button
           type="button"
           mat-icon-button
@@ -128,36 +141,36 @@
           [class.closed]="navState === false"
         >
           <mat-icon *ngIf="navState">clear</mat-icon>
-          <mat-icon *ngIf="navState ===  false">subject</mat-icon>
+          <mat-icon *ngIf="navState === false">subject</mat-icon>
         </button>
         <br />
         <br />
 
         <mat-list role="list" class="list one">
-          <mat-list-item matRipple  role="list-item" class="list-item">
-            <mat-icon style="color:#070D4D">home</mat-icon>
+          <mat-list-item matRipple role="list-item" class="list-item">
+            <mat-icon style="color: #070d4d">home</mat-icon>
             <span class="label" *ngIf="navState">My Project</span>
           </mat-list-item>
         </mat-list>
 
         <mat-divider></mat-divider>
         <mat-list role="list" class="list two">
+          <a routerLink="notes" style="text-decoration: none">
+            <mat-list-item matRipple role="list-item" class="list-item">
+              <mat-icon style="color: #f7bb32">note</mat-icon>
+              <span class="label" *ngIf="navState">Notes</span>
+            </mat-list-item></a
+          >
 
-          <mat-list-item  matRipple  role="list-item" class="list-item">
-            <mat-icon  style="color:#F7BB32">note</mat-icon>
-            <span class="label" *ngIf="navState">Notes</span>
-          </mat-list-item>
-
-           <mat-list-item matRipple role="list-item" class="list-item">
-            <mat-icon style="color:#A94064">assignment_turned_in</mat-icon>
+          <mat-list-item matRipple role="list-item" class="list-item">
+            <mat-icon style="color: #a94064">assignment_turned_in</mat-icon>
             <span class="label" *ngIf="navState">Tasks</span>
           </mat-list-item>
 
-          <mat-list-item matRipple  role="list-item" class="list-item">
-            <mat-icon  style="color:#4CBFFB">add</mat-icon>
+          <mat-list-item matRipple role="list-item" class="list-item">
+            <mat-icon style="color: #4cbffb">add</mat-icon>
             <span class="label" *ngIf="navState">Add</span>
           </mat-list-item>
-
         </mat-list>
       </mat-drawer>
       <div class="routing">
@@ -166,7 +179,4 @@
       </div>
     </mat-drawer-container>
   </div>
-
 </div>
-
-

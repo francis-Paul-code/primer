@@ -34,7 +34,7 @@ export class AppComponent {
       this.mobile = false;
       this.tablet= false;
     }
-    if (this.viewWidth <= 890) {
+    if (this.viewWidth > 421 && this.viewWidth <= 890) {
       this.navState = false;
       this.tablet = true;
       this.mobile = false;

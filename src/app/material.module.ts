@@ -7,7 +7,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatRippleModule } from '@angular/material/core';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatCardModule } from '@angular/material/card';
-
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -19,7 +19,8 @@ import { MatCardModule } from '@angular/material/card';
     MatDividerModule,
     MatRippleModule,
     LayoutModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule
   ],
 })
 export class MaterialModule {}

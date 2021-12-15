@@ -13,6 +13,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NoteComponent } from './components/note/note.component';
 import { NotesComponent } from './pages/notes/notes.component';
+import { NoteDetailComponent } from './pages/notes/detail/detail.component';
 
 
 
@@ -24,6 +25,7 @@ import { NotesComponent } from './pages/notes/notes.component';
     HomeComponent,
     NoteComponent,
     NotesComponent,
+    NoteDetailComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,16 +10,16 @@ export class NoteComponent implements OnInit {
   @Input() body!: string;
   @Input() date!: string;
   @Input() subTitle!: string;
-
+  @Input() id!: string;
+  
   viewWidth: any;
   mobile: boolean = false;
   desktop: boolean = false;
   tablet: boolean = false;
   constructor() {}
-
   ngOnInit(): void {
     this.viewWidth = window.innerWidth;
-    if (this.viewWidth <= 420) {
+    if (this.viewWidth <= 450) {
       this.mobile = true;
       this.desktop = false;
       this.tablet = false;
@@ -29,7 +29,7 @@ export class NoteComponent implements OnInit {
       this.mobile = false;
       this.tablet = false;
     }
-    if (this.viewWidth <= 890) {
+    if (this.viewWidth > 451 && this.viewWidth <= 890) {
       this.tablet = true;
       this.mobile = false;
       this.desktop = false;

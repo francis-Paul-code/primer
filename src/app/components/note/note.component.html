@@ -1,4 +1,4 @@
-<div class="_container">
+<div class="_container" id={{id}}>
   <mat-card class="_card">
     <mat-card-header class="_header">
       <mat-card-title-group style="display: inline">
@@ -24,8 +24,8 @@
           : body
       }}</span>
       <span *ngIf="desktop">{{
-        body.split(" ").length > 80
-          ? body.split(" ").splice(0, 80).join(" ")
+        body.split(" ").length > 100
+          ? body.split(" ").splice(0, 100).join(" ")
           : body
       }}</span>
     </mat-card-content>
