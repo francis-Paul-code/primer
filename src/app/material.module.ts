@@ -8,7 +8,10 @@ import { MatRippleModule } from '@angular/material/core';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   exports: [
@@ -20,7 +23,11 @@ import { MatInputModule } from '@angular/material/input';
     MatRippleModule,
     LayoutModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule
   ],
 })
 export class MaterialModule {}

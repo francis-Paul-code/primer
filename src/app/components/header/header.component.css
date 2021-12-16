@@ -7,7 +7,7 @@ header {
   justify-content: space-between;
   background: #0f324d;
   -webkit-tap-highlight-color: transparent;
-  box-shadow: 0 4px 2px -2px rgba(0,0,0,.3);
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
 }
 .logobar {
   position: relative;
@@ -27,8 +27,8 @@ header {
   height: 65%;
   padding-inline-start: 50px;
   align-items: center;
-   display: flex;
-   box-sizing: border-box;
+  display: flex;
+  box-sizing: border-box;
   box-sizing: border-box;
 }
 .logotext {
@@ -49,4 +49,17 @@ header {
   display: flex;
   float: right;
   right: 3%;
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    height: 50px;
+  }
+  .logo {
+    height: 55%;
+    padding-inline-start: 20px;
+  }
+  .logotext {
+    font-size: 1.60em;
+  }
 }

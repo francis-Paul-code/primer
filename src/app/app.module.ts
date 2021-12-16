@@ -14,6 +14,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { NoteComponent } from './components/note/note.component';
 import { NotesComponent } from './pages/notes/notes.component';
 import { NoteDetailComponent } from './pages/notes/detail/detail.component';
+import { TasksComponent } from './pages/tasks/tasks.component';
+import { AddComponent } from './pages/add/add.component';
+import { TaskComponent } from './components/task/task.component';
 
 
 
@@ -26,6 +29,9 @@ import { NoteDetailComponent } from './pages/notes/detail/detail.component';
     NoteComponent,
     NotesComponent,
     NoteDetailComponent,
+    TasksComponent,
+    AddComponent,
+    TaskComponent,
   ],
   imports: [
     BrowserModule,

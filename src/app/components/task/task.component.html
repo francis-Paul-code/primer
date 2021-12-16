@@ -1,0 +1,73 @@
+<div class="_container" id="{{ id }}">
+  <mat-card class="taskCard">
+    <mat-card-content>
+      <div
+        class="badge"
+        [style.height]="editStatus == false ? '8vh' : '38vh'"
+        [style.background]='color'
+      ></div>
+      <section class="body">
+        <section class="topBar">
+          <section class="actions">
+            <mat-checkbox id={{id}} class="checked"  ></mat-checkbox>
+          </section>
+          <textarea class="titleInput" *ngIf="editStatus" id="title">{{title}}</textarea>
+          <span class="title" *ngIf="editStatus == false">{{title}}</span>
+          <span class="date">{{ date }}</span>
+          <span class="icon">
+            <button mat-icon-button (click)="onToggle()">
+              <mat-icon *ngIf="editStatus">arrow_drop_up</mat-icon>
+              <mat-icon *ngIf="editStatus == false">arrow_drop_down</mat-icon>
+            </button>
+          </span>
+        </section>
+
+        <section class="dropdown" *ngIf="editStatus">
+          <textarea
+            matInput
+            placeholder="Task Note 250 Characters"
+            maxlength="250"
+            class="noteInput"
+            id="body"
+          >
+          {{body}}
+          </textarea>
+          <section class="dropdown-actions">
+            <div class="dateInput">
+              <mat-form-field class="datepicker" appearance="fill">
+                <mat-label>Due Date</mat-label>
+                <input matInput [matDatepicker]="picker" id="date" placeholder={{date}}/>
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="picker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker  touchUi #picker ></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="badgeSelector">
+              <mat-form-field appearance="fill">
+                <mat-label>Priority</mat-label>
+                <mat-select id="priority" [(value)]='selected'>
+                  <mat-option value="none">None</mat-option>
+                  <mat-option value="urgent">Urgent</mat-option>
+                  <mat-option value="high">High</mat-option>
+                  <mat-option value="medium">Medium</mat-option>
+                  <mat-option value="low">Low</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="buttonGroup">
+              <button
+                mat-raised-button
+                style="background: #0f324d; color: white"
+                (click)="GetValues()"
+              >
+                Update
+              </button>
+            </div>
+          </section>
+        </section>
+      </section>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -42,16 +42,16 @@
               <span class="label" *ngIf="navState">Notes</span>
             </mat-list-item></a
           >
-
+          <a routerLink="tasks" style="text-decoration: none">
           <mat-list-item matRipple role="list-item" class="list-item">
             <mat-icon style="color: #a94064">assignment_turned_in</mat-icon>
             <span class="label" *ngIf="navState">Tasks</span>
-          </mat-list-item>
-
+          </mat-list-item></a>
+          <a routerLink="add" style="text-decoration: none">
           <mat-list-item matRipple role="list-item" class="list-item">
             <mat-icon style="color: #4cbffb">add</mat-icon>
             <span class="label" *ngIf="navState">Add</span>
-          </mat-list-item>
+          </mat-list-item></a>
         </mat-list>
       </mat-drawer>
       <div class="routing">
@@ -102,10 +102,11 @@
             </mat-list-item>
           </a>
 
+          <a routerLink="tasks" style="text-decoration: none">
           <mat-list-item matRipple role="list-item" class="list-item">
             <mat-icon style="color: #a94064">assignment_turned_in</mat-icon>
             <span class="label" *ngIf="navState">Tasks</span>
-          </mat-list-item>
+          </mat-list-item></a>
 
           <mat-list-item matRipple role="list-item" class="list-item">
             <mat-icon style="color: #4cbffb">add</mat-icon>
@@ -162,10 +163,11 @@
             </mat-list-item></a
           >
 
+          <a routerLink="tasks" style="text-decoration: none">
           <mat-list-item matRipple role="list-item" class="list-item">
             <mat-icon style="color: #a94064">assignment_turned_in</mat-icon>
             <span class="label" *ngIf="navState">Tasks</span>
-          </mat-list-item>
+          </mat-list-item></a>
 
           <mat-list-item matRipple role="list-item" class="list-item">
             <mat-icon style="color: #4cbffb">add</mat-icon>
