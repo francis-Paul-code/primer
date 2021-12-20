@@ -1,0 +1,87 @@
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+}
+.tasksContainer {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  margin: 0%;
+  padding: 1%;
+  box-sizing: border-box;
+  float: left;
+}
+.notesContainer {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  margin: 0%;
+  padding: 1%;
+  box-sizing: border-box;
+  float: right;
+}
+.notes {
+  position: relative;
+  height: 92.5%;
+  width: 100%;
+  overflow: hidden;
+  top: 2%;
+  background: rgb(249.5, 250, 250);
+}
+._content {
+  position: relative;
+  width: 98%;
+  left: 1%;
+  height: 80vh;
+  margin: 2% 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
+.noteListItem {
+  position: relative;
+  width: 18vw;
+  list-style-type: none;
+  margin: 2% auto;
+}
+
+.urgent {
+  position: relative;
+  height: 46%;
+  width: 100%;
+  overflow: hidden;
+  margin: 2% 0;
+  background: rgb(249.5, 250, 250);
+}
+.urgent ul {
+  position: relative;
+  width: 98%;
+  left: 1%;
+  height: 36vh;
+  margin: 2% 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.allTasks {
+  position: relative;
+  height: 46%;
+  width: 100%;
+  overflow: hidden;
+  margin: 2% 0;
+  background: rgb(249.5, 250, 250);
+}
+.allTasks ul {
+  position: relative;
+  width: 98%;
+  height: 36vh;
+  margin: 2% 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}

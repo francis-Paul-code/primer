@@ -1,0 +1,67 @@
+<div class="alert" *ngIf="status">
+  <div class='alertContainer'>
+    <mat-card>
+      <mat-card-title>Are You Sure?</mat-card-title>
+      <mat-card-content>
+        <span>This Action Is Irreversable</span>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button class="btn one" color="warn" (click)='proc()'>Okay</button>
+         <button mat-button class="btn two" color="primary" (click)='canc()'>Cancel</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>
+<div class="_container" >
+  <div class="_content">
+    <header>
+      <span>{{ note.title }}</span>
+      <button mat-button (click)="Update()" class="btn">{{button}}</button>
+    </header>
+    <section>
+      <mat-card class="title">
+        <mat-card-title>Title</mat-card-title>
+        <mat-card-content>
+          <span *ngIf="editStatus === false"> {{ note.title }} </span
+          ><mat-form-field
+            *ngIf="editStatus"
+            style="position: relative; width: 100%"
+          >
+            <textarea matInput class="titleInput" id="titleInput" required>{{ note.title }}</textarea>
+          </mat-form-field>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="date">
+        <mat-card-title>Date</mat-card-title>
+        <mat-card-content>
+          <span *ngIf="editStatus === false"> {{ note.date }} </span
+          ><mat-form-field
+            *ngIf="editStatus"
+            style="position: relative; width: 100%"
+          >
+            <textarea matInput class="dateInput" id="dateInput">{{ note.date }}</textarea>
+          </mat-form-field>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="body">
+        <mat-card-title>Body</mat-card-title>
+        <mat-card-content>
+          <span *ngIf="editStatus === false"> {{ note.body }} </span
+          ><mat-form-field
+            *ngIf="editStatus"
+            style="position: relative; width: 100%"
+          >
+            <textarea matInput class="bodyInput" id="bodyInput" name="bodyInput"  required>{{ note.body }}</textarea>
+          </mat-form-field>
+        </mat-card-content>
+      </mat-card>
+    </section>
+    <div class="footer" >
+      <button *ngIf="editStatus" mat-button class="Submit" (click)="NewData()">Save</button>
+       <button mat-button class="delete" (click)="auth()" >Delete</button>
+    </div>
+  </div>
+</div>

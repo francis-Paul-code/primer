@@ -1,0 +1,56 @@
+<div class="main">
+  <section class="tasksContainer">
+    <mat-card class="urgent">
+      <mat-card-title> Urgent Tasks</mat-card-title>
+      <mat-card-content>
+        <ul>
+          <li *ngFor="let task of urgent" style="position: relative; width: 100%; margin:2% 0;">
+            <app-task
+            id='{{task.id}}'
+            body='{{task.body}}'
+            date='{{task.date}}'
+            title='{{task.title}}'
+            priority='{{task.priority}}'
+            ></app-task>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="allTasks">
+      <mat-card-title> All Tasks</mat-card-title>
+      <mat-card-content>
+        <ul>
+          <li *ngFor="let task of tasks" style="position: relative; width: 100%; margin:2% 0;">
+            <app-task
+            id='{{task.id}}'
+            body='{{task.body}}'
+            date='{{task.date}}'
+            title='{{task.title}}'
+            priority='{{task.priority}}'
+            ></app-task>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </section>
+
+  <section class="notesContainer">
+    <mat-card class="notes">
+      <mat-card-title>Notes</mat-card-title>
+      <mat-card-content>
+        <ul class="_content">
+          <li class="noteListItem" *ngFor="let note of notes" matRipple>
+             <a routerLink="notes/{{note.id}}" style="cursor: pointer; text-decoration:none;">
+            <app-note
+            id="{{note.id}}"
+            body="{{note.body}}"
+            title="{{note.title}}"
+            subTitle=""
+            date="{{note.date}}"
+            ></app-note></a>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</div>

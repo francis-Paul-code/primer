@@ -1,0 +1,15 @@
+<div class="_container">
+  <ul class="_content">
+    <li class="item" *ngFor="let task of Task" MatRipple>
+      <app-task
+        id="{{ task.id }}"
+        title="{{ task.title }}"
+        body="{{ task.body }}"
+        date="{{ task.date }}"
+        priority="{{ task.priority }}"
+        (updated)='refresh()'
+      >
+      </app-task>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,58 @@
+._container {
+  position: relative !important ;
+  color: #0f324d;
+  width: 100%;
+  height: 100%;
+}
+._card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+._header {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  height: 15%;
+  overflow: hidden;
+  display: inline;
+}
+._content {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: start;
+  height: 85%;
+  padding: 5px;
+  overflow: hidden;
+}
+._content * {
+  position: relative;
+  color: rgb(27, 26, 26);
+  font-size: 1em;
+  font-weight: 450;
+}
+._header > mat-card-title-group > strong {
+  position: relative;
+  font-size: 1.1em;
+  font-weight: 550;
+  display: flex;
+  margin-bottom:3px;
+}
+
+/* mobile */
+@media screen and (max-width: 420px){
+  ._content * {
+  font-size: 0.8em;
+  font-weight: 450;
+}
+._header > mat-card-title-group > strong {
+  font-size:0.9em;
+  font-weight: 500;
+
+}._header > mat-card-title-group > p{
+  font-size:0.8em;
+  font-weight: 400;
+}
+}

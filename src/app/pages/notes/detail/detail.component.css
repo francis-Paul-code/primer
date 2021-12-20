@@ -1,0 +1,174 @@
+._container {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  margin-bottom: 5%;
+  overflow: hidden;
+}
+._content {
+  position: relative;
+  width: 50%;
+  border-radius: 10px;
+  height: 98%;
+  overflow: hidden;
+  margin: 0 auto;
+  top: 2%;
+  display: block;
+  background: white;
+  padding: 0 !important ;
+}
+._content > header {
+  position: relative;
+  width: 100%;
+  min-height: 7vh;
+  background: #0f324d;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+._content > header > button {
+  position: relative;
+  box-sizing: border-box;
+  float: right;
+  width: 20%;
+  height: 90%;
+  margin-top: 1.8%;
+  color: white;
+  background: #a94064;
+  right: 2%;
+}
+._content > header > span {
+  position: relative;
+  box-sizing: border-box;
+  float: right;
+  width: 70%;
+  min-height: 100%;
+  padding: 10px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+._content > section {
+  position: relative;
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  height: 70vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.title {
+  position: relative;
+  margin-bottom: 15px;
+  min-height: 5vh;
+}
+.title > mat-card-title {
+  position: relative;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #0f324d;
+}
+.date {
+  position: relative;
+  margin-bottom: 15px;
+  min-height: 5vh;
+}
+.date > mat-card-title {
+  position: relative;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #0f324d;
+}
+.body {
+  position: relative;
+  margin-bottom: 15px;
+  min-height: 45vh;
+}
+.body > mat-card-title {
+  position: relative;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #0f324d;
+}
+
+.footer {
+  position: relative;
+  width: 90%;
+  height: 8vh;
+  margin: 0 auto;
+  justify-content: end;
+  margin-top: 1vh;
+}
+.footer button {
+  position: relative;
+  box-sizing: border-box;
+  float: right;
+  width: 20%;
+}
+.Submit {
+  color: white;
+  background: #0f324d;
+  margin-right: 15px;
+}
+.delete {
+  color: white;
+  background: #ec4434;
+  margin-right: 15px;
+}
+
+.bodyInput {
+  position: relative;
+  width: 100%;
+  min-height: 40vh;
+  border: none;
+  font-size: 1em;
+  font-weight: 450;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 0.0125em;
+  background: rgb(247, 247, 247);
+}
+.titleInput {
+  position: relative;
+  width: 100%;
+  min-height: 3vh;
+  border: none;
+  font-size: 1em;
+  font-weight: 450;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 0.0125em;
+  background: rgb(247, 247, 247);
+}
+.dateInput {
+  position: relative;
+  width: 100%;
+  min-height: 3vh;
+  border: none;
+  font-size: 1em;
+  font-weight: 450;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 0.0125em;
+  background: rgb(247, 247, 247);
+}
+
+.alert {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  align-items: center;
+  background: #0f324d52;
+}
+.alertContainer {
+  position: relative;
+  height: fit-content;
+  width: 20%;
+  margin: 0 auto;
+  transform: translateY(200%)
+}

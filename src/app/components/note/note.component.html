@@ -1,0 +1,33 @@
+<div class="_container" id={{id}}>
+  <mat-card class="_card">
+    <mat-card-header class="_header">
+      <mat-card-title-group style="display: inline">
+        <strong>{{
+        title.split(" ").length > 5
+          ? title.split(" ").splice(0, 5).join(" ")
+          : title
+      }}</strong>
+        <p>{{ date }}</p>
+        </mat-card-title-group>
+    </mat-card-header>
+    <br/>
+    <mat-divider [inset]="true"></mat-divider>
+    <mat-card-content class="_content">
+      <span *ngIf="tablet">{{
+        body.split(" ").length > 40
+          ? body.split(" ").splice(0, 40).join(" ")
+          : body
+      }}</span>
+      <span *ngIf="mobile">{{
+        body.split(" ").length > 15
+          ? body.split(" ").splice(0, 15).join(" ")
+          : body
+      }}</span>
+      <span *ngIf="desktop">{{
+        body.split(" ").length > 100
+          ? body.split(" ").splice(0, 100).join(" ")
+          : body
+      }}</span>
+    </mat-card-content>
+  </mat-card>
+</div>
