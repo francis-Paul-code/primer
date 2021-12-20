@@ -31,4 +31,7 @@ export class NotesService {
   deletenote(id: string): Observable<Notes>{
     return this.http.delete<Notes>(this.apiUrl + "/" + id)
   }
+  addNote(item:any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, item, options)
+  }
 }

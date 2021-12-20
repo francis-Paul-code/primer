@@ -1,0 +1,32 @@
+._container{
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  overflow: hidden;
+  justify-content:center;
+  padding:1%;
+}
+._content
+{
+  position: relative;
+  width: 50vw;
+  height: 93%;
+  overflow: hidden;
+  top:1%;
+  border-radius: 8px;
+  background:white;
+  margin:0 auto;
+
+}
+.Note{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background:green;
+}
+.Task{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background:blue;
+}

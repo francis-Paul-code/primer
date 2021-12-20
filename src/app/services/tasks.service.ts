@@ -21,4 +21,10 @@ export class TasksService {
   updateTask(task:Tasks, id:string): Observable<any> {
     return this.http.patch<any>(this.apiUrl+"/"+id,task, options )
   }
+  deleteTask(id: string): Observable<any> {
+    return this.http.delete<any>(this.apiUrl+"/"+id)
+  }
+  addTask(item:any):Observable<any> {
+    return this.http.post<any>(this.apiUrl,item,options)
+  }
 }

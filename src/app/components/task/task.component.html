@@ -9,7 +9,7 @@
       <section class="body">
         <section class="topBar">
           <section class="actions">
-            <mat-checkbox id={{id}} class="checked"  ></mat-checkbox>
+            <mat-checkbox id={{id}} class="checked" (change)="delete($event)"  ></mat-checkbox>
           </section>
           <textarea class="titleInput" *ngIf="editStatus" id="title">{{title}}</textarea>
           <span class="title" *ngIf="editStatus == false">{{title}}</span>
@@ -63,6 +63,13 @@
                 (click)="GetValues()"
               >
                 Update
+              </button>
+               <button
+                mat-raised-button
+                style="background: #DD4145; color: white; margin-right:5%;"
+                (click)="delete($event)"
+              >
+               Delete
               </button>
             </div>
           </section>

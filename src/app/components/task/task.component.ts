@@ -14,6 +14,7 @@ export class TaskComponent implements OnInit {
   @Input() id!: string;
   @Input() priority!: string;
   @Output() updated = new EventEmitter();
+
   editStatus = false;
   color!: string;
   selected!: string;
@@ -35,8 +36,14 @@ export class TaskComponent implements OnInit {
       this.color = '#51A846';
     }
   }
-  checked(event: any) {
-    console.log(event.checked);
+
+  delete(event: any) {
+    try {
+      const id = this.id
+      this.tasksService.deleteTask(id).subscribe()
+    } finally {
+      this.updated.emit();
+    }
   }
 
   onToggle() {

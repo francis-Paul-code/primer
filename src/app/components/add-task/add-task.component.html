@@ -1,0 +1,75 @@
+<section class="main">
+  <div class="_container">
+    <mat-card class="title">
+      <mat-card-title>Title</mat-card-title>
+      <mat-card-content>
+        <mat-form-field style="position: relative; width: 100%">
+          <textarea
+            matInput
+            class="titleInput"
+            id="titleInput"
+            required
+            placeholder="Title"
+
+          >{{title}}</textarea>
+        </mat-form-field>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="InputGrp">
+      <mat-card-title>More</mat-card-title>
+      <mat-card-content>
+        <div class="dateInput">
+          <mat-form-field class="datepicker" appearance="fill">
+            <mat-label>Due Date</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker"
+              id="date"
+              placeholder="mm/dd/yy"
+              value={{date}}
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker touchUi #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="badgeSelector">
+              <mat-form-field appearance="fill">
+                <mat-label>Priority</mat-label>
+                <mat-select id="priority" [(value)]="priority" >
+                  <mat-option value="none">None</mat-option>
+                  <mat-option value="urgent">Urgent</mat-option>
+                  <mat-option value="high">High</mat-option>
+                  <mat-option value="medium">Medium</mat-option>
+                  <mat-option value="low">Low</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="body">
+      <mat-card-title>Note</mat-card-title>
+      <mat-card-content>
+        <mat-form-field style="position: relative; width: 100%">
+          <textarea
+            matInput
+            class="bodyInput"
+            id="bodyInput"
+            name="bodyInput"
+            required
+            placeholder="Body"
+
+          >{{note}}</textarea>
+        </mat-form-field>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="_footer">
+    <button mat-button class="save" (click)='addTask()'>Save</button>
+  </div>
+</section>

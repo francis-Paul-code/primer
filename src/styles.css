@@ -29,8 +29,12 @@ body {
   font-size: 2em;
   font-weight: bold;
 }
-
-
+.mat-tab-header{
+  background-color:#0F324D !important;
+}
+.mat-tab-label{
+  color: #FFFFFF !important;
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -50,5 +54,5 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #A94064);
+  background: #A94064;
 }
