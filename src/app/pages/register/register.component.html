@@ -1,0 +1,156 @@
+<section class="main-container">
+  <div class="container">
+    <section class="media"></section>
+    <section class="content-holder">
+      <div class="form-holder">
+        <mat-tab-group mat-align-tabs="center">
+          <mat-tab label="Register">
+            <section class="_content">
+              <div class="heading">Register</div>
+              <div class="cicatation">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
+                dolore consequatur ex sequi, magnam iure impedit laborum totam
+                id officia exercitationem quisquam ratione.
+              </div>
+              <form
+                class="registry-form"
+                [formGroup]="registryform"
+                (ngSubmit)="handleRegister()"
+              >
+                <!-- name -->
+                <div class="cont">
+                  <label for="name">Name</label>
+                  <mat-form-field id="name" class="input">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="username" required/>
+                    <mat-error> Cannot leave field empty </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <!-- email -->
+                <div class="cont">
+                  <label for="email">Email</label>
+                  <mat-form-field id="email" class="input">
+                    <mat-label>Email</mat-label>
+                    <input
+                      matInput
+                      type="email"
+                      formControlName="email"
+                      [formControl]="emailFormControl"
+                      [errorStateMatcher]="matcher"
+                      placeholder="Ex. pat@example.com"
+                    />
+                    <mat-error
+                      *ngIf="
+                        emailFormControl.hasError('email') &&
+                        !emailFormControl.hasError('required')
+                      "
+                    >
+                      Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      Email is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <!-- password -->
+                <div class="cont">
+                  <label for="password">Password</label>
+                  <mat-form-field id="password" class="input">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Password" required />
+                    <mat-error> Please provide a valid password </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div class="cont">
+                  <label for="Cpassword"> Confirm Password</label>
+                  <mat-form-field id="Cpassword" class="input">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" required />
+                    <mat-error> Cannot leave field empty </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <!-- Verification -->
+                <mat-checkbox required id="consent" color="primary" required
+                  >Agree to our terms of use</mat-checkbox
+                >
+                <br />
+                <button
+                  mat-raised-button
+                  style="background: #02274e; color: white; width: 20%"
+                  type="submit"
+                >
+                  Register
+                </button>
+              </form>
+            </section>
+          </mat-tab>
+
+
+
+
+          <mat-tab label="Login">
+            <section class="_content-login">
+              <div class="heading">LogIn</div>
+              <div class="cicatation">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Delectus est
+                perferendis magnam.
+              </div>
+              <form class="login-form" [formGroup]="loginform"   (ngSubmit)="handleLogin()">
+                <!-- email -->
+                <div class="cont">
+                  <label for="email1">Email</label>
+                  <mat-form-field id="email1" class="input">
+                    <mat-label>Email</mat-label>
+                    <input
+                      matInput
+                      type="email"
+                      name="Email"
+                      formControlName="email"
+                      [formControl]="emailFormControl"
+                      [errorStateMatcher]="matcher"
+                      placeholder="Ex. pat@example.com"
+                    />
+                    <mat-error
+                      *ngIf="
+                        emailFormControl.hasError('email') &&
+                        !emailFormControl.hasError('required')
+                      "
+                    >
+                      Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      Email is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <!-- password -->
+                <div class="cont">
+                  <label for="password1">Password</label>
+                  <mat-form-field id="password1" class="input">
+                    <mat-label>Password</mat-label>
+                    <input matInput name="Password" required  formControlName="password"/>
+                    <mat-error> Please enter a valid password </mat-error>
+                  </mat-form-field>
+                </div>
+                <br />
+                <button
+                  mat-raised-button
+                  style="background: #02274e; color: white; width: 20%"
+                  type="submit"
+                >
+                  Login
+                </button>
+              </form>
+            </section>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </section>
+  </div>
+</section>
