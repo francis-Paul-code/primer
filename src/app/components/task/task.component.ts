@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Tasks } from '../../pages/tasks';
 import { TasksService } from 'src/app/services/tasks.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-task',
@@ -18,7 +19,7 @@ export class TaskComponent implements OnInit {
   editStatus = false;
   color!: string;
   selected!: string;
-
+  formattedDate = moment(this.date).format('dddd, MMMM Do YYYY, h:mm:ss a');
   colorBadge() {
     if (this.priority === 'none') {
       this.color = '#6C757D';
@@ -39,8 +40,8 @@ export class TaskComponent implements OnInit {
 
   delete(event: any) {
     try {
-      const id = this.id
-      this.tasksService.deleteTask(id).subscribe()
+      const id = this.id;
+      this.tasksService.deleteTask(id).subscribe();
     } finally {
       this.updated.emit();
     }
@@ -67,10 +68,10 @@ export class TaskComponent implements OnInit {
         priority: this.selected,
       };
 
-      this.tasksService.updateTask(task, id).subscribe()
+      this.tasksService.updateTask(task, id).subscribe();
     } finally {
       this.editStatus = !this.editStatus;
-      this.updated.emit()
+      this.updated.emit();
     }
   }
 }

@@ -4,7 +4,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { RouterModule, Routes } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AccessGuard } from './middleware/access.guard';
+import { HttpIntInterceptor } from './middleware/http-int.interceptor';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +23,7 @@ import { AddComponent } from './pages/add/add.component';
 import { TaskComponent } from './components/task/task.component';
 import { AddNoteComponent } from './components/add-note/add-note.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 
 
@@ -36,6 +41,7 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
     TaskComponent,
     AddNoteComponent,
     AddTaskComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,8 +50,13 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    AccessGuard,
+    { provide: HTTP_INTERCEPTORS, useClass: HttpIntInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

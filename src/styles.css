@@ -29,12 +29,6 @@ body {
   font-size: 2em;
   font-weight: bold;
 }
-.mat-tab-header{
-  background-color:#0F324D !important;
-}
-.mat-tab-label{
-  color: #FFFFFF !important;
-}
 
 /* width */
 ::-webkit-scrollbar {

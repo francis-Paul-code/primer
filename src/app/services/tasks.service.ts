@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Tasks } from '../pages/tasks';
+import { environment } from '../../environments/environment';
 
 const options = {
   headers: new HttpHeaders({
@@ -13,18 +14,23 @@ const options = {
   providedIn: 'root',
 })
 export class TasksService {
-  private apiUrl = 'http://localhost:8080/primer/tasks/';
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
+
   getTask(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+    return this.http.get<any>(environment.apiURL+ '/tasks');
   }
+
   updateTask(task:Tasks, id:string): Observable<any> {
-    return this.http.patch<any>(this.apiUrl+"/"+id,task, options )
+    return this.http.patch<any>(
+      environment.apiURL + '/tasks' + '/' + id,
+      task,
+      options
+    );
   }
   deleteTask(id: string): Observable<any> {
-    return this.http.delete<any>(this.apiUrl+"/"+id)
+    return this.http.delete<any>(environment.apiURL + '/tasks' + '/' + id);
   }
   addTask(item:any):Observable<any> {
-    return this.http.post<any>(this.apiUrl,item,options)
+    return this.http.post<any>(environment.apiURL + '/tasks', item, options);
   }
 }

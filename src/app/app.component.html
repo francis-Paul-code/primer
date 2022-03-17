@@ -1,10 +1,11 @@
 <div class="main-container">
   <app-header></app-header>
 
+
   <!-- Desktop Version -->
 
-  <div class="main-content" *ngIf="desktop">
-    <mat-drawer-container class="sidenav" autosize fullscreen>
+  <div class="main-content" *ngIf="desktop" >
+    <mat-drawer-container class="sidenav" autosize fullscreen *ngIf="routes === true">
       <mat-drawer
         #drawer
         class="sidenav-slide"
@@ -62,12 +63,15 @@
         <router-outlet></router-outlet>
       </div>
     </mat-drawer-container>
+     <div class="routing" *ngIf="routes === false">
+        <router-outlet></router-outlet>
+      </div>
   </div>
 
   <!-- Mobile Version  -->
 
   <div class="main-content" *ngIf="mobile">
-    <mat-drawer-container class="sidenav" autosize fullscreen>
+    <mat-drawer-container class="sidenav" autosize fullscreen *ngIf="routes === true">
       <mat-drawer
         #drawer
         class="sidenav-slide"
@@ -127,12 +131,16 @@
         <router-outlet></router-outlet>
       </div>
     </mat-drawer-container>
+
+     <div class="routing" *ngIf="routes === false">
+        <router-outlet></router-outlet>
+      </div>
   </div>
 
   <!-- Tablet Version  -->
 
   <div class="main-content" *ngIf="tablet">
-    <mat-drawer-container class="sidenav" autosize fullscreen>
+    <mat-drawer-container class="sidenav" autosize fullscreen *ngIf="routes === true">
       <mat-drawer
         #drawer
         class="sidenav-slide"
@@ -192,5 +200,8 @@
         <router-outlet></router-outlet>
       </div>
     </mat-drawer-container>
+     <div class="routing" *ngIf="routes === false">
+        <router-outlet></router-outlet>
+      </div>
   </div>
 </div>
